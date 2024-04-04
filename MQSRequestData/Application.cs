@@ -366,6 +366,22 @@ namespace MQSRequestData
             string hourEnd = textBoxEndHour.Text;
             timeT2.SetAttribute("value", hourEnd);
 
+            //new itens to Javier///////////////////////////////////////////
+            HtmlElement buttonNTFElement = webComponent.Document.GetElementById("NTF_Checked");
+            if (buttonNTFElement == null)
+                throw new Exception("Cannot find NTF_Checked Element");
+
+            buttonNTFElement.InvokeMember("click");
+
+            HtmlElement buttonDPHUElement = webComponent.Document.GetElementById("DPHU");
+            if (buttonDPHUElement == null)
+                throw new Exception("Cannot find DPHU Element");
+
+            buttonDPHUElement.InvokeMember("click");
+
+
+            /////////////////////////////////////////////////////
+
             HtmlElement button3Element = webComponent.Document.GetElementById("Button3");
             if (button3Element == null)
                 throw new Exception("Cannot find button3 Element");
@@ -452,6 +468,8 @@ namespace MQSRequestData
                 cleanPage = cleanPage.Replace("Tot Pass", "TotPass");
                 cleanPage = cleanPage.Replace("Tot Fail", "TotFail");
                 cleanPage = cleanPage.Replace("Tot Handle", "TotHandle");
+                cleanPage = cleanPage.Replace("Prime NTF %", "PrimeNTF");
+                cleanPage = cleanPage.Replace("Prime DPHU", "PrimeDPHU"); 
                 cleanPage = cleanPage.Replace("Avg PASS Time", "AvgPASSTime");
                 cleanPage = cleanPage.Replace("%", "");
                 cleanPage = cleanPage.Replace("5GFR1BDTST", "T5GFR1BDTST");
