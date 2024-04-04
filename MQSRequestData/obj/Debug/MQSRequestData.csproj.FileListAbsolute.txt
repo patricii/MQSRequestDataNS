@@ -1,0 +1,41 @@
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\bin\Debug\MQSRequestData.exe.config
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\bin\Debug\MQSRequestData.exe
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\bin\Debug\MQSRequestData.pdb
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\bin\Debug\MetroFramework.Design.dll
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\bin\Debug\MetroFramework.dll
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\bin\Debug\MetroFramework.Fonts.dll
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.ApkMQS.resources
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.Properties.Resources.resources
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.csproj.GenerateResource.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.csproj.CoreCompileInputs.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.csproj.CopyComplete
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.exe
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.pdb
+C:\DEVELOPMENT PROJECTS\MQSRequestData\MQSRequestData\obj\Debug\MQSRequestData.csprojAssemblyReference.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\MQSRequestData.exe.config
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\MQSRequestData.exe
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\MQSRequestData.pdb
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\HtmlAgilityPack.dll
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\MetroFramework.Design.dll
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\MetroFramework.dll
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\MetroFramework.Fonts.dll
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\HtmlAgilityPack.pdb
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\bin\Debug\HtmlAgilityPack.xml
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.ApkMQS.resources
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.Properties.Resources.resources
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.csproj.GenerateResource.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.csproj.CoreCompileInputs.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.csproj.CopyComplete
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.exe
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.pdb
+C:\ProductDataMQS\MQSRequestData\MQSRequestData.exe.config
+C:\ProductDataMQS\MQSRequestData\MQSRequestData.exe
+C:\ProductDataMQS\MQSRequestData\MQSRequestData.pdb
+C:\DEVELOPMENT PROJECTS\MQSRequestDataTC\MQSRequestData\obj\Debug\MQSRequestData.csprojAssemblyReference.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestDataNS\MQSRequestData\obj\Debug\MQSRequestData.ApkMQS.resources
+C:\DEVELOPMENT PROJECTS\MQSRequestDataNS\MQSRequestData\obj\Debug\MQSRequestData.Properties.Resources.resources
+C:\DEVELOPMENT PROJECTS\MQSRequestDataNS\MQSRequestData\obj\Debug\MQSRequestData.csproj.GenerateResource.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestDataNS\MQSRequestData\obj\Debug\MQSRequestData.csproj.CoreCompileInputs.cache
+C:\DEVELOPMENT PROJECTS\MQSRequestDataNS\MQSRequestData\obj\Debug\MQSRequestData.csproj.CopyComplete
+C:\DEVELOPMENT PROJECTS\MQSRequestDataNS\MQSRequestData\obj\Debug\MQSRequestData.exe
+C:\DEVELOPMENT PROJECTS\MQSRequestDataNS\MQSRequestData\obj\Debug\MQSRequestData.pdb
