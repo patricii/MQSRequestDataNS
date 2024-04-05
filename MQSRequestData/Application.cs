@@ -15,9 +15,9 @@ namespace MQSRequestData
 
         }
         string url = "mqs.motorola.com";
-        string urlYield = "mqs.motorola.com/Collab_GridCpt/default.aspx?enc=INbDb3OXdMp3vde2LbmjfOqENqspcgXNx/9sSFuBt4l9YJObzeJfOcCHKc3GbKGAGwWF5fcyX0zSJaKBMrGv7/9C3vQtCHLGErFQnT+6UylYGmdsJPlvfKLrkaYE5qCz";
+        string urlPareto = "mqs.motorola.com/NTF_Pareto2/Default10.aspx?enc=INbDb3OXdMp3vde2LbmjfOqENqspcgXNx/9sSFuBt4l9YJObzeJfOcCHKc3GbKGAGwWF5fcyX0zSJaKBMrGv7/9C3vQtCHLGErFQnT+6UylYGmdsJPlvfKLrkaYE5qCz";
         string home = "MQS Home";
-        string yield = "MQS - Yield Report";
+        string pareto = "MQS - Failure & NTF Pareto Report";
         string user = string.Empty;
         string password = string.Empty;
         string erroMsg = string.Empty;
@@ -53,7 +53,7 @@ namespace MQSRequestData
             }
             else
             {
-                labelStatus.Text = "Page Error: " + erroMsg;                
+                labelStatus.Text = "Page Error: " + erroMsg;
                 //MessageBox.Show("Page Error: " + erroMsg);
             }
             Close();
@@ -164,8 +164,8 @@ namespace MQSRequestData
 
                     //New TAB "MQS - Yield Report"
 
-                    webComponent.Navigate(urlYield);
-                    WebInfos = new Dictionary<string, object>() { { "NavigationError", "" }, { "Navigated", false }, { "URL_Title", yield } };
+                    webComponent.Navigate(urlPareto);
+                    WebInfos = new Dictionary<string, object>() { { "NavigationError", "" }, { "Navigated", false }, { "URL_Title", pareto } };
                     webComponent.Tag = WebInfos;
                     do
                     {
@@ -246,8 +246,8 @@ namespace MQSRequestData
                     //metroTabControl1.SelectedTab.Text = webComponent.DocumentTitle;
                     navigateYieldTab(webComponent);
                     //New TAB "MQS - Yield Report"
-                    webComponent.Navigate(urlYield);
-                    WebInfos = new Dictionary<string, object>() { { "NavigationError", "" }, { "Navigated", false }, { "URL_Title", yield } };
+                    webComponent.Navigate(urlPareto);
+                    WebInfos = new Dictionary<string, object>() { { "NavigationError", "" }, { "Navigated", false }, { "URL_Title", pareto } };
                     webComponent.Tag = WebInfos;
                     do
                     {
@@ -319,7 +319,7 @@ namespace MQSRequestData
 
             tabMainElement.InvokeMember("click");
 
-            HtmlElement tabYieldElement = webComponent.Document.GetElementById("ctl00_main_tabMain_tabReports_HyperLink7");
+            HtmlElement tabYieldElement = webComponent.Document.GetElementById("ctl00_main_tabMain_tabReports_HyperLink2");
             if (tabYieldElement == null)
                 throw new Exception("Cannot find tabMain Hyperlink Element");
 
@@ -333,54 +333,38 @@ namespace MQSRequestData
             if (LocationElement == null)
                 throw new Exception("Cannot find LocationList Element");
 
-           /* if (comboBoxSites.Text == "MDB_TDF_Newsan")
-                LocationElement.SetAttribute("value", "95");
+            /* if (comboBoxSites.Text == "MDB_TDF_Newsan")
+                 LocationElement.SetAttribute("value", "95");
 
-            else
-                LocationElement.SetAttribute("value", "16"); //MDB_Jaguariuna Default*/
+             else
+                 LocationElement.SetAttribute("value", "16"); //MDB_Jaguariuna Default*/
 
             LocationElement.SetAttribute("value", "83"); //only Newsan site for Javier
 
-            HtmlElement dateT1 = webComponent.Document.GetElementById("TextBox1");
+            HtmlElement dateT1 = webComponent.Document.GetElementById("Accordion_Normal_content_TextBox1");
             if (dateT1 == null)
                 throw new Exception("Cannot find LocationList Element");
 
             //DateTime today = DateTime.Today;
             dateT1.SetAttribute("value", dateTimePickerStart.Text);
 
-            HtmlElement dateT2 = webComponent.Document.GetElementById("TextBox2");
+            HtmlElement dateT2 = webComponent.Document.GetElementById("Accordion_Normal_content_TextBox2");
             if (dateT2 == null)
                 throw new Exception("Cannot find LocationList Element");
             dateT2.SetAttribute("value", dateTimePickerEnd.Text);
 
 
-            HtmlElement timeT1 = webComponent.Document.GetElementById("TextBox6");
+            HtmlElement timeT1 = webComponent.Document.GetElementById("Accordion_Normal_content_TextBox6");
             if (timeT1 == null)
                 throw new Exception("Cannot find LocationList Element");
             string hourStart = textBoxStartHour.Text;
             timeT1.SetAttribute("value", hourStart);
 
-            HtmlElement timeT2 = webComponent.Document.GetElementById("TextBox7");
+            HtmlElement timeT2 = webComponent.Document.GetElementById("Accordion_Normal_content_TextBox7");
             if (timeT2 == null)
                 throw new Exception("Cannot find LocationList Element");
             string hourEnd = textBoxEndHour.Text;
             timeT2.SetAttribute("value", hourEnd);
-
-            //new itens to Javier///////////////////////////////////////////
-            HtmlElement buttonNTFElement = webComponent.Document.GetElementById("NTF_Checked");
-            if (buttonNTFElement == null)
-                throw new Exception("Cannot find NTF_Checked Element");
-
-            buttonNTFElement.InvokeMember("click");
-
-            HtmlElement buttonDPHUElement = webComponent.Document.GetElementById("DPHU");
-            if (buttonDPHUElement == null)
-                throw new Exception("Cannot find DPHU Element");
-
-            buttonDPHUElement.InvokeMember("click");
-
-
-            /////////////////////////////////////////////////////
 
             HtmlElement button3Element = webComponent.Document.GetElementById("Button3");
             if (button3Element == null)
@@ -444,8 +428,9 @@ namespace MQSRequestData
         }
         public void documentTextParser(string documentText)
         {
-            documentText = documentText.Substring(documentText.LastIndexOf("border=\"1\" rules=\"all\" cellSpacing=\"0\">") + 39);
+            documentText = documentText.Substring(documentText.LastIndexOf("border=\"1\" rules=\"all\" cellSpacing=\"0\" cellPadding=\"4\">") + 39);
             documentText = documentText.Replace("<TBODY>", "<HTML><HEAD></HEAD><BODY><FORM><TABLE><TBODY>");
+            documentText = documentText.Replace("cellPadding=\"4\">", "");
             string cleanPage = documentText;
             DateTime today = DateTime.Now;
             try
@@ -460,17 +445,12 @@ namespace MQSRequestData
                     sw.Write(cleanPage);
                 }
                 //clean data for csv convertion
-                cleanPage = cleanPage.Replace("PYield %", "PYield");
-                cleanPage = cleanPage.Replace("Prime Pass", "PrimePass");
-                cleanPage = cleanPage.Replace("Prime Fail", "PrimeFail");
-                cleanPage = cleanPage.Replace("Prime Handle", "PrimeHandle");
-                cleanPage = cleanPage.Replace("TotYield %", "TotYield");
-                cleanPage = cleanPage.Replace("Tot Pass", "TotPass");
-                cleanPage = cleanPage.Replace("Tot Fail", "TotFail");
-                cleanPage = cleanPage.Replace("Tot Handle", "TotHandle");
-                cleanPage = cleanPage.Replace("Prime NTF %", "PrimeNTF");
-                cleanPage = cleanPage.Replace("Prime DPHU", "PrimeDPHU"); 
-                cleanPage = cleanPage.Replace("Avg PASS Time", "AvgPASSTime");
+                cleanPage = cleanPage.Replace("%PFail / PH", "PFail_PH");
+                cleanPage = cleanPage.Replace("%PNtf / PH", "PNtf_PH");
+                cleanPage = cleanPage.Replace("%PNtf / PFail", "PNtf_PFail");
+                cleanPage = cleanPage.Replace("%TFail / TH", "TFail_TH");
+                cleanPage = cleanPage.Replace("%TNtf / TH", "TNtf_TH");
+                cleanPage = cleanPage.Replace("%TNtf / TFail", "TNtf_TFail");
                 cleanPage = cleanPage.Replace("%", "");
                 cleanPage = cleanPage.Replace("5GFR1BDTST", "T5GFR1BDTST");
 
@@ -487,6 +467,6 @@ namespace MQSRequestData
             {
                 MessageBox.Show("Error: " + ex);
             }
-        }       
+        }
     }
 }
